@@ -2,4 +2,4 @@
 已刷并标记为【简单】的题我就放在文件夹中不罗列出来了
 
 ## 算法
-[简单](arithmetic/easy)
+[简单系列](arithmetic/easy)
