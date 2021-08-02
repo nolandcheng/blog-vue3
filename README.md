@@ -3,3 +3,7 @@
 
 ## 算法
 [简单系列](arithmetic/easy)
+
+[中等系列](arithmetic/middle)
+
+[困难系列](arithmetic/hard)
