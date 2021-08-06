@@ -1,5 +1,18 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './index.css'
+/*
+ * @Descripttion:
+ * @Author: Cheng
+ * @Date: 2021-08-05 17:10:09
+ * @LastEditors: Cheng
+ * @LastEditTime: 2021-08-06 17:59:35
+ */
+import { createApp } from "vue"
+import App from "./App.vue"
+import "./index.css"
+import router from "./router/index"
+import vuex from "./store/index"
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.use(vuex)
+app.mount("#app")

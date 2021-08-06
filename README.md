@@ -62,3 +62,31 @@ yarn add vue-router@4.0.10
 yarn add vuex@4.0.2
 ```
 随后在项目中新增router和store文件夹，在其中的`index.ts`添加相关配置
+```ts
+// router
+import { createRouter, createWebHashHistory } from "vue-router"
+
+export default createRouter({
+  history: createWebHashHistory(), // hash模式
+  routes: [],
+})
+```
+```ts
+// store
+import { createStore } from "vuex"
+
+interface State {
+  userName: string
+}
+
+export default createStore({
+  state: {
+    userName: "test",
+  },
+})
+```
+所有的属性和方法都要在当前文件引入后再使用。
+
+vue3的语法很明显与vue2不太一样，而vuex和router都遵循了这样的写法，这种写法也将贯穿项目全身。
+
+最后再在`main.ts`中引入二者，即完成了配置。

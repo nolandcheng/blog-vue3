@@ -3,14 +3,11 @@
  * @Author: Cheng
  * @Date: 2021-08-06 17:48:21
  * @LastEditors: Cheng
- * @LastEditTime: 2021-08-06 17:48:29
+ * @LastEditTime: 2021-08-06 17:52:29
  */
-import {createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHashHistory } from "vue-router"
 
-// 在 Vue-router新版本中，需要使用createRouter来创建路由
 export default createRouter({
-  // 指定路由的模式,此处使用的是hash模式
-  history: createWebHashHistory(),
-  // 路由地址
-  routes: []
+  history: createWebHashHistory(), // hash模式
+  routes: [],
 })
