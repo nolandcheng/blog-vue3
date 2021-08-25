@@ -1,5 +1,6 @@
 # blog-vue3
 
+## 0.前言
 依赖管理工具我使用的是`yarn`
 
 ## 1. 项目初始化
@@ -40,7 +41,7 @@ yarn add typescript -D
 ```shell
 npx tsc --init
 ```
-随后将项目各处的`main.js`的后缀改为`.ts`
+随后将项目中的`main.js`的后缀改为`.ts`
 
 但是`main.ts`会报错：
 `Cannot find module './App.vue' or its corresponding type declarations.`
@@ -90,3 +91,44 @@ export default createStore({
 vue3的语法很明显与vue2不太一样，而vuex和router都遵循了这样的写法，这种写法也将贯穿项目全身。
 
 最后再在`main.ts`中引入二者，即完成了配置。
+
+### 2.3 添加element的ui库
+安装element的vue3.x支持版本element-plus
+```shell
+yarn add element-plus
+```
+
+全局引入的方式这里就不过多赘述。
+
+不过即使是按需引入，element官方也建议我们**引入全部css文件**，以避免额外的插件安装。
+
+在src新建在`plugins/element-plus.ts`文件写上一些基础的配置
+``` ts
+import { App } from "vue"
+import "element-plus/dist/index.css"
+import { ElButton, ElMessageBox } from "element-plus"
+
+const components = [ElButton]
+const plugins = [ElMessageBox]
+
+const ElementPlus = {
+  install: (app: App<Element>) => {
+    components.forEach((component: any) => app.component(component.name, component))
+
+    plugins.forEach((plugin) => {
+      app.use(plugin)
+    })
+
+    app.config.globalProperties.$ELEMENT = { size: "small", zIndex: 3000 }
+  },
+}
+export default ElementPlus
+```
+
+最后在`main.ts`中引入即可
+```ts
+import ElementPlus from "./plugins/element-plus"
+app.use(ElementPlus)
+```
+
+在这里我曾遇到一个诡异的BUG，只要import xxx element-plus，就报错没有定义default，耗费了好几个小时，最后删除node_modules，重新安装即可。
