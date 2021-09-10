@@ -131,4 +131,8 @@ import ElementPlus from "./plugins/element-plus"
 app.use(ElementPlus)
 ```
 
+在页面中直接使用`element-plus`的组件即可
+
 在这里我曾遇到一个诡异的BUG，只要import xxx element-plus，就报错没有定义default，耗费了好几个小时，最后删除node_modules，重新安装即可。
+
+### 2.4 封装axios请求
