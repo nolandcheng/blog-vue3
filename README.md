@@ -88,7 +88,7 @@ export default createStore({
 ```
 所有的属性和方法都要在当前文件引入后再使用。
 
-vue3的语法很明显与vue2不太一样，而vuex和router都遵循了这样的写法，这种写法也将贯穿项目全身。
+vue3的语法很明显与vue2不太一样，而vuex和router都遵循了这样的写法，这种写法也将贯穿整个项目开发流程。
 
 最后再在`main.ts`中引入二者，即完成了配置。
 
@@ -133,6 +133,14 @@ app.use(ElementPlus)
 
 在页面中直接使用`element-plus`的组件即可
 
-在这里我曾遇到一个诡异的BUG，只要import xxx element-plus，就报错没有定义default，耗费了好几个小时，最后删除node_modules，重新安装即可。
+在这里我曾遇到一个诡异的BUG，只要import xxx element-plus，就报错没有定义default，耗费了好几个小时，最后发现只需要删除node_modules，重新安装即可。
 
 ### 2.4 封装axios请求
+安装axios
+```shell
+yarn add axios
+```
+新建axios文件`src/utils/request.ts`，并在该文件中进行axios的基本配置，这里我尝试使用class进行封装：
+```ts
+
+```
