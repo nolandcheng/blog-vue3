@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2021-11-18 17:57:26
+ * @LastEditTime: 2021-11-19 11:09:20
 -->
 <template>
   <h1>{{ msg }}</h1>
@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { test } from "@/apis/test";
+// import { test } from "@/apis/test";
 export default {
   name: "HelloWorld",
   props: {
@@ -27,7 +27,7 @@ export default {
     };
   },
   mounted() {
-    console.log(test());
+    // console.log(test());
     // test().then((res) => {});
   },
 };

@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2021-09-10 10:44:48
  * @LastEditors: Cheng
- * @LastEditTime: 2021-11-19 01:16:29
+ * @LastEditTime: 2021-11-19 16:53:46
  */
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 
@@ -54,7 +54,6 @@ class service {
   // 设置发起请求
   request(options: AxiosRequestConfig) {
     const instance = axios.create()
-    console.log(this)
     options = Object.assign(this.getConfig(), options)
     this.interceptors(instance, options.url)
     return instance(options)
