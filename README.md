@@ -1,10 +1,12 @@
 # blog-vue3
 
-## 0.前言
+## 0. 前言
 
-依赖管理工具我使用的是`yarn`
+vue3 + ts + vite2 + element-plus 搭建的完整博客项目，如果想查看基础架构，点击前往[基础项目](https://github.com/cqdcyonghao/blog-vue3/tree/basic)
 
 ## 1. 项目初始化
+
+依赖管理工具我使用的是`yarn`
 
 按照官网的步骤，这里不过多赘述。
 
