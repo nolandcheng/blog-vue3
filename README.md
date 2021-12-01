@@ -2,7 +2,7 @@
 
 ## 0. 前言
 
-vue3 + ts + vite2 + element-plus 搭建的完整博客项目，如果想查看基础架构，点击前往[基础项目](https://github.com/cqdcyonghao/blog-vue3/tree/basic)
+vue3 + ts + vite2 + element-plus 搭建的基础博客项目，并没有实际业务逻辑，点击前往[完整项目](https://github.com/cqdcyonghao/blog-vue3/tree/master)
 
 ## 1. 项目初始化
 
