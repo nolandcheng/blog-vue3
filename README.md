@@ -228,3 +228,57 @@ export const test = () => {
 ```
 
 随后在 vue 文件中直接引入该方法并使用即可。
+
+## 3. HelloWord
+
+这里只简单介绍和使用一些相对来说更能体现 vue3 特点的常用 api，更多更具体细致的语法请移步 vue3 官网。
+
+### 3.1 组合式 API：Setup
+
+在开发一个组件的过程中，data、computed、methods 这类选项将会随着业务逻辑的更迭而变得愈发的庞大和复杂，同一个逻辑关注点可能分散在不同的选项中，这会使得后续的维护变得困难，因此我们需要通过组合式 API 将同一逻辑点的东西放在一起复用以此来尽量规避这种情况。
+
+Setup 选项是组合式 API 的基础，是存放组合式 API 的地方，它的调用在其他选项的解析之前，因此 Setup 中不可使用`this`。
+
+简单尝试：
+
+```vue
+<template>
+  <h1>{{ newMsg }}</h1>
+  <el-button>测试element-plus</el-button>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, reactive, onMounted, toRefs, computed } from "vue"
+
+interface Book {
+  title: string
+  year?: number
+}
+
+export default defineComponent({
+  name: "HelloWorld",
+  props: {
+    msg: String,
+  },
+  setup(props) {
+    const { msg } = toRefs(props)
+    const newMsg = computed(() => msg.value + " + vite")
+
+    const name = ref<string>("Word")
+    name.value = "girl"
+
+    const book = reactive<Book>({ title: "Vue 3 Guide" })
+
+    const initVue = () => {
+      console.log("Hello " + name.value + " by " + book.title)
+    }
+
+    onMounted(initVue)
+
+    return {
+      newMsg,
+    }
+  },
+})
+</script>
+```

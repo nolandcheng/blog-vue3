@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5", // 指定编译后的版本目录
-    "module": "commonjs", // 指定要使用的模版标准
+    "target": "esnext", // 指定编译后的版本目录
+    "module": "esnext", // 指定要使用的模版标准
     "lib": [ // 指定包含在编译中的库文件
       "es6",
       "dom"
     ],
     "allowJs": true, // 指定是否允许编辑js文件，默认false不编译
     "checkJs": true, // 指定是否检查和报告js文件中的错误，默认为false
-    "jsx": "preserve", // 知道jsx代码的开发环境：preserve、react-native、react
+    "strict": true,
+    "jsx": "preserve", // jsx代码的开发环境：preserve、react-native、react
+    "moduleResolution": "node",
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
