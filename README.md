@@ -1,8 +1,6 @@
 # blog-vue3
 
-## 0. 前言
-
-vue3 + ts + vite2 + element-plus 搭建的基础博客项目，并没有实际业务逻辑，点击前往[完整项目](https://github.com/cqdcyonghao/blog-vue3/tree/master)
+此仓库是由 vue3 + ts + vite2 + element-plus 搭建的基础博客项目，这里更多的是展示一些基础的配置，如果想查看完整的博客项目，点击前往[完整项目](https://github.com/cqdcyonghao/blog-vue3/tree/master)
 
 ## 1. 项目初始化
 
@@ -233,10 +231,6 @@ export const test = () => {
 
 ## 3. HelloWord
 
-这里只简单介绍和使用一些相对来说更能体现 vue3 特点的常用 api，更多更具体细致的语法请移步 vue3 官网。
-
-### 3.1 组合式 API：Setup
-
 在开发一个组件的过程中，data、computed、methods 这类选项将会随着业务逻辑的更迭而变得愈发的庞大和复杂，同一个逻辑关注点可能分散在不同的选项中，这会使得后续的维护变得困难，因此我们需要通过组合式 API 将同一逻辑点的东西放在一起复用以此来尽量规避这种情况。
 
 Setup 选项是组合式 API 的基础，是存放组合式 API 的地方，它的调用在其他选项的解析之前，因此 Setup 中不可使用`this`。
@@ -284,3 +278,15 @@ export default defineComponent({
 })
 </script>
 ```
+
+这里使用了一些 vue3 常用的选项：
+
+1. 使用 ref、reactive 结合 ts 声明具有响应式的变量。
+2. 使用 toRefs 创建对 props 的属性的响应式引用
+3. 使用生命周期和独立的计算属性
+
+如此便形成了一个完整的逻辑关注点，许多由这种逻辑关注点支撑的组件搭配起来便构成了我们一个又一个的页面了。
+
+---
+
+如果对你有帮助的话，欢迎给 star👏
