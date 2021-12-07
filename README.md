@@ -1,4 +1,4 @@
-# blog-vue3
+# blog-vue3-basic
 
 此仓库是由 vue3 + ts + vite2 + element-plus 搭建的基础博客项目，这里更多的是展示一些基础的配置，如果想查看完整的博客项目，点击前往[完整项目](https://github.com/cqdcyonghao/blog-vue3/tree/master)
 
