@@ -3,11 +3,11 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2021-12-01 17:26:05
+ * @LastEditTime: 2021-12-08 11:04:31
 -->
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0" />
+  <HelloWorld msg="# test" />
 </template> 
 
 <script lang="ts">
