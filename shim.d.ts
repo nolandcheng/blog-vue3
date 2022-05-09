@@ -3,12 +3,17 @@
  * @Author: Cheng
  * @Date: 2021-08-06 17:29:20
  * @LastEditors: Cheng
- * @LastEditTime: 2021-08-25 22:42:24
+ * @LastEditTime: 2022-05-09 14:49:43
  */
 declare module "*.vue" {
-  import { Component } from "vue"
-  const component: Component
-  export default component
+  import type { ComponentOptions } from "vue"
+  const Component: ComponentOptions
+  export default Component
+}
+declare module "*.md" {
+  import type { ComponentOptions } from "vue"
+  const Component: ComponentOptions
+  export default Component
 }
 declare module "*.js"
 declare module "*.json"

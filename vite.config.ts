@@ -3,10 +3,11 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:28:29
  * @LastEditors: Cheng
- * @LastEditTime: 2022-05-08 20:57:32
+ * @LastEditTime: 2022-05-09 14:48:40
  */
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
+import Markdown from "vite-plugin-md"
 import alias from "@rollup/plugin-alias"
 import { join } from "path"
 import Components from "unplugin-vue-components/vite"
@@ -18,7 +19,10 @@ function resolve(dir: string) {
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+    Markdown(),
     alias(),
     Components({
       resolvers: [NaiveUiResolver()],
