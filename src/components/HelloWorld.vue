@@ -3,16 +3,16 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-05-08 21:07:47
+ * @LastEditTime: 2022-05-09 14:52:34
 -->
 <template>
-  <div v-html="mdText"></div>
+  <!-- <div v-html="mdText"></div> -->
+  <Test></Test>
   <n-button type="primary">1</n-button>
 </template>
 
 <script lang="ts">
-import { marked } from "marked"
-// import test from "@/markdowns/test.md";
+import Test from "@/markdowns/test.md"
 import { defineComponent, ref, reactive, onMounted, toRefs, computed } from "vue"
 
 interface Book {
@@ -22,6 +22,9 @@ interface Book {
 
 export default defineComponent({
   name: "HelloWorld",
+  components: {
+    Test,
+  },
   props: {
     msg: {
       type: String,
@@ -31,7 +34,7 @@ export default defineComponent({
   setup(props) {
     const { msg } = toRefs(props)
     const mdText = computed(() => {
-      return marked(msg.value, { sanitize: true })
+      return msg.value
     })
 
     const name = ref<string>("Word")
