@@ -3,12 +3,12 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-05-09 14:52:34
+ * @LastEditTime: 2022-05-10 23:17:16
 -->
 <template>
   <!-- <div v-html="mdText"></div> -->
   <Test></Test>
-  <n-button type="primary">1</n-button>
+  <n-button type="primary">1123</n-button>
 </template>
 
 <script lang="ts">
