@@ -21,5 +21,10 @@
         "src/*"
       ]
     },
-  }
+  },
+  "exclude": [
+    "tailwind.config.js",
+    "stylelint.config.js",
+    "postcss.config.js"
+  ],
 }
