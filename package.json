@@ -6,26 +6,28 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^2.3.2",
+    "@vitejs/plugin-vue": "^2.3.3",
     "axios": "^0.24.0",
-    "element-plus": "^2.2.0",
-    "naive-ui": "^2.28.2",
-    "ts-node": "^10.7.0",
-    "vue": "^3.2.33",
+    "naive-ui": "^2.30.6",
+    "ts-node": "^10.8.1",
+    "vue": "^3.2.37",
     "vue-router": "4.0.10",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.9",
-    "@types/node": "^17.0.31",
-    "@vue/compiler-sfc": "^3.2.33",
+    "@types/node": "^18.0.0",
+    "@vue/compiler-sfc": "^3.2.37",
     "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.13",
+    "happy-dom": "^5.3.4",
+    "markdown-it": "^13.0.1",
+    "postcss": "^8.4.14",
+    "prismjs": "^1.28.0",
     "stylelint-config-standard": "^25.0.0",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.6.4",
-    "unplugin-vue-components": "^0.19.5",
-    "vite": "^2.9.8",
-    "vite-plugin-md": "^0.13.1"
+    "tailwindcss": "^3.1.4",
+    "typescript": "^4.7.4",
+    "unplugin-vue-components": "^0.20.1",
+    "vite": "^2.9.13",
+    "vite-plugin-md": "^0.18.1"
   }
 }
