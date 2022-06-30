@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-06-29 01:04:07
+ * @LastEditTime: 2022-07-01 00:59:10
 -->
 <template>
   <!-- <div v-html="mdText"></div> -->
@@ -14,6 +14,7 @@
 <script lang="ts">
 import Test from "@/markdowns/test.md"
 import { defineComponent, ref, reactive, onMounted, toRefs, computed } from "vue"
+import store from "@/store/index"
 
 interface Book {
   title: string
@@ -32,6 +33,8 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const counterStore = store()
+    console.log(counterStore.userName)
     const { msg } = toRefs(props)
     const mdText = computed(() => {
       return msg.value

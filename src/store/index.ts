@@ -1,18 +1,15 @@
 /*
- * @Descripttion: store
+ * @Descripttion: pinia
  * @Author: Cheng
  * @Date: 2021-08-06 17:53:04
  * @LastEditors: Cheng
- * @LastEditTime: 2021-08-06 17:58:35
+ * @LastEditTime: 2022-07-01 00:53:52
  */
-import { createStore } from "vuex"
+import { defineStore } from "pinia"
 
-interface State {
-  userName: string
-}
-
-export default createStore({
-  state: {
+export default defineStore({
+  id: "myGlobalState",
+  state: () => ({
     userName: "test",
-  },
+  }),
 })
