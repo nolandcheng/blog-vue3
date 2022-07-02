@@ -3,20 +3,14 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-05-09 14:52:50
+ * @LastEditTime: 2022-07-02 21:57:34
 -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld />
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
-import HelloWorld from "./components/HelloWorld.vue"
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
 }
 </script>
