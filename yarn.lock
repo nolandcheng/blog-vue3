@@ -190,6 +190,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.66.tgz#dd035d409df322acc83dff62a602f12a5783bbb3"
   integrity sha512-tktOkFUA4kXx2hhhrB8bIFb5TbwzS4uOhKEmwiD+NoiL0qtP2OQ9mFldbgD4dV1djrlBYP6eBuQZiWjuHUpqFw==
 
+"@types/node@~14.14.31":
+  version "14.14.45"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.45.tgz#ec2dfb5566ff814d061aef7e141575aedba245cf"
+  integrity sha512-DssMqTV9UnnoxDWu959sDLZzfvqCF0qDNRjaWeYSui9xkFe61kKo4l1TWNTQONpuXEm+gLMRvdlzvNHBamzmEw==
+
 "@types/node@~17.0.5":
   version "17.0.31"
   resolved "https://registry.npmmirror.com/@types/node/-/node-17.0.31.tgz#a5bb84ecfa27eec5e1c802c6bbf8139bdb163a5d"
@@ -204,6 +209,18 @@
   version "0.0.14"
   resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.14.tgz#94e175b53623384bff1f354cdb3197a8d63cdbe5"
   integrity sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==
+
+"@vicons/ionicons5@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@vicons/ionicons5/-/ionicons5-0.12.0.tgz#c39fda04420dfae3b58053faf8aaf3555253299d"
+  integrity sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==
+
+"@vicons/utils@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@vicons/utils/-/utils-0.1.4.tgz#accea9226ff0078ebd80d00dcb63ef5e74b210ff"
+  integrity sha512-OHI19qVNN6i+uPQ+Y3f2s0dUxwsYnOCcKBW7XOU4yXXO1aU3ZoKpblCc3+4N0qmgoJs5rWKRAaMisipqEXJwAg==
+  dependencies:
+    "@xicons/utils" "^0.1.4"
 
 "@vitejs/plugin-vue@^2.3.3":
   version "2.3.3"
@@ -331,6 +348,13 @@
   integrity sha512-THXPvMBFmg6Gf6AwRn/EdTh2mhqwjGsB2Yfp374LNQSQVKRHtnJ0I42bsZTn7nuEliBxqUrGQm/lN6qUHmhJLw==
   dependencies:
     vue-demi "*"
+
+"@xicons/utils@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@xicons/utils/-/utils-0.1.4.tgz#cece50613b34d4b4c71e73bb0be92981067e11e1"
+  integrity sha512-uXxKDLz9abr80yJC05XSTq6wlyFcdW+N/1IYJkeHjzzXVc4VQ0sEYMoMMTjAH7HQBOyOkzOB4pf5NGF72lwa8Q==
+  dependencies:
+    css-render "^0.13.2"
 
 acorn-node@^1.8.2:
   version "1.8.2"
@@ -578,6 +602,15 @@ create-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
+
+css-render@^0.13.2:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/css-render/-/css-render-0.13.9.tgz#56f28c180a83a10ec610a12a9ad9fec087ac9dc1"
+  integrity sha512-n3C4ZH59rveBrUlAD7n0Ze9/gUMKa4dlH1C9CWKpGcIHR/xRcIVXzBGy1iw8WWq2ySmn2/ZqOpySQNAK5Pb6sw==
+  dependencies:
+    "@emotion/hash" "~0.8.0"
+    "@types/node" "~14.14.31"
+    csstype "~3.0.5"
 
 css-render@^0.15.10:
   version "0.15.10"
