@@ -1,21 +1,12 @@
 <!--
- * @Descripttion: 首页
+ * @Descripttion: 
  * @Author: Cheng
- * @Date: 2022-07-02 21:56:47
+ * @Date: 2022-07-05 01:17:24
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-05 01:07:49
+ * @LastEditTime: 2022-07-05 01:18:05
 -->
 <template>
-  <div class="h-full flex flex-col justify-center items-center">
-    <div>
-      <n-image width="200" :src="getImgUrl('../assets/avatar.png')" />
-    </div>
-    <n-divider />
-    <div>
-      <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
-      <n-switch v-model:value="activeSwitch" />
-    </div>
-  </div>
+  <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
 </template>
 
 <script lang="ts" setup>
@@ -29,11 +20,7 @@ function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
 
-const getImgUrl = (name: string) => {
-  return new URL(name, import.meta.url).href
-}
 const activeKey = ref<string | null>(null)
-const activeSwitch = ref(false)
 const menuOptions: MenuOption[] = [
   {
     label: () =>
