@@ -3,13 +3,15 @@
  * @Author: Cheng
  * @Date: 2022-07-02 21:56:47
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-06 01:01:04
+ * @LastEditTime: 2022-07-06 01:33:30
 -->
 <template>
   <div class="h-full flex flex-col justify-center items-center">
     <div>
       <n-avatar round :size="100" :src="getImgUrl('../assets/avatar.png')" />
     </div>
+    <h2 class="my-1">Noland Cheng</h2>
+    <p class="text-gray-400">涓流虽寡，浸成江河；爝火虽微，卒能燎野。</p>
     <n-divider class="w-96" />
     <div class="w-56 flex items-center justify-between">
       <template v-for="(item, index) in menuList" :key="index">
