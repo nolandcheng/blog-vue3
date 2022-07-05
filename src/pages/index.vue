@@ -3,88 +3,49 @@
  * @Author: Cheng
  * @Date: 2022-07-02 21:56:47
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-05 01:07:49
+ * @LastEditTime: 2022-07-06 01:01:04
 -->
 <template>
   <div class="h-full flex flex-col justify-center items-center">
     <div>
-      <n-image width="200" :src="getImgUrl('../assets/avatar.png')" />
+      <n-avatar round :size="100" :src="getImgUrl('../assets/avatar.png')" />
     </div>
-    <n-divider />
-    <div>
-      <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
-      <n-switch v-model:value="activeSwitch" />
+    <n-divider class="w-96" />
+    <div class="w-56 flex items-center justify-between">
+      <template v-for="(item, index) in menuList" :key="index">
+        <n-tooltip trigger="hover">
+          <template #trigger>
+            <n-button text class="text-3xl">
+              <n-icon>
+                <component :is="item.icon" />
+              </n-icon>
+            </n-button>
+          </template>
+          {{ item.title }}
+        </n-tooltip>
+        <n-divider v-if="index !== menuList.length - 1" vertical />
+      </template>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { h, ref, Component } from "vue"
-import { RouterLink } from "vue-router"
-import { NIcon } from "naive-ui"
-import type { MenuOption } from "naive-ui"
-import { LogoGithub as BookIcon } from "@vicons/ionicons5"
-
-function renderIcon(icon: Component) {
-  return () => h(NIcon, null, { default: () => h(icon) })
-}
+import { h, ref } from "vue"
+import {
+  Book as blogIcon,
+  DesktopOutline as systemIcon,
+  LogoGithub as githubIcon,
+  LogoTwitter as twitterIcon,
+} from "@vicons/ionicons5"
 
 const getImgUrl = (name: string) => {
   return new URL(name, import.meta.url).href
 }
-const activeKey = ref<string | null>(null)
-const activeSwitch = ref(false)
-const menuOptions: MenuOption[] = [
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "blog",
-            params: {},
-          },
-        },
-        { default: () => "编码" }
-      ),
-    key: "blog",
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "talk",
-            params: {},
-          },
-        },
-        { default: () => "杂谈" }
-      ),
-    key: "talk",
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "about",
-            params: {},
-          },
-        },
-        { default: () => "关于" }
-      ),
-    key: "about",
-  },
-  {
-    label: () =>
-      h("a", {
-        href: "https://github.com/nolandcheng",
-        target: "_blank",
-      }),
-    key: "GitHub",
-    icon: renderIcon(BookIcon),
-  },
+
+const menuList: Array<any> = [
+  { title: "我的博客", icon: blogIcon, url: "" },
+  { title: "React后台", icon: systemIcon, url: "" },
+  { title: "GitHub", icon: githubIcon, url: "https://github.com/nolandcheng" },
+  { title: "twitter", icon: twitterIcon, url: "https://twitter.com/nolandcheng15" },
 ]
 </script>
