@@ -3,16 +3,28 @@
  * @Author: Cheng
  * @Date: 2021-08-06 17:48:21
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-04 23:40:37
+ * @LastEditTime: 2022-07-07 00:29:27
  */
-import { createRouter, createWebHashHistory } from "vue-router"
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
+import Layout from "@/components/Layout.vue"
 
-export default createRouter({
+const routes: Array<RouteRecordRaw> = [
+  { path: "/", name: "index", component: () => import("@/pages/index.vue") },
+  {
+    path: "/layout",
+    redirect: "/blog",
+    component: Layout,
+    children: [
+      { path: "/blog", name: "blog", component: () => import("@/pages/blog.vue") },
+      { path: "/talk", name: "talk", component: () => import("@/pages/talk.vue") },
+      { path: "/about", name: "about", component: () => import("@/pages/about.vue") },
+    ],
+  },
+]
+
+const router = createRouter({
   history: createWebHashHistory(), // hash模式
-  routes: [
-    { path: "/", name: "index", component: () => import("@/pages/index.vue") },
-    { path: "/blog", name: "blog", component: () => import("@/pages/blog.vue") },
-    { path: "/talk", name: "talk", component: () => import("@/pages/talk.vue") },
-    { path: "/about", name: "about", component: () => import("@/pages/about.vue") },
-  ],
+  routes,
 })
+
+export default router
