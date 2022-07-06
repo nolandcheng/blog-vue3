@@ -3,10 +3,11 @@
  * @Author: Cheng
  * @Date: 2022-07-05 01:17:24
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-05 01:18:05
+ * @LastEditTime: 2022-07-07 00:08:25
 -->
 <template>
   <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+  <router-view></router-view>
 </template>
 
 <script lang="ts" setup>
