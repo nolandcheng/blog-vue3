@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-07 00:55:31
+ * @LastEditTime: 2022-07-08 01:29:17
 -->
 <template>
   <n-config-provider :theme-overrides="themeOverrides" class="h-screen">
@@ -21,6 +21,7 @@ const router = useRouter()
 
 const themeOverrides: GlobalThemeOverrides = {
   common: {
+    primaryColor: "#f03752",
     primaryColorHover: "#f03752", // 海棠红
   },
   LoadingBar: {

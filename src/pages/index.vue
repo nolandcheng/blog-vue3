@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2022-07-02 21:56:47
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-07 00:55:54
+ * @LastEditTime: 2022-07-08 01:39:44
 -->
 <template>
   <div class="h-full flex flex-col justify-center items-center">
@@ -35,9 +35,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount, onMounted, nextTick } from "vue"
 import { useRouter } from "vue-router"
-import { useLoadingBar } from "naive-ui"
 import {
   Book as blogIcon,
   DesktopOutline as systemIcon,
@@ -46,7 +44,6 @@ import {
 } from "@vicons/ionicons5"
 
 const router = useRouter()
-const loadingBar = useLoadingBar()
 
 const getImgUrl = (name: string) => {
   return new URL(name, import.meta.url).href
@@ -58,16 +55,6 @@ const menuList: Array<any> = [
   { title: "GitHub", icon: githubIcon, url: "https://github.com/nolandcheng" },
   { title: "twitter", icon: twitterIcon, url: "https://twitter.com/nolandcheng15" },
 ]
-
-onBeforeMount(() => {
-  loadingBar.start()
-})
-
-onMounted(() => {
-  setTimeout(() => {
-    loadingBar.finish()
-  })
-})
 
 function goLink({ path, url }: { path: string; url: URL }) {
   if (path) {
