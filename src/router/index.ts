@@ -3,18 +3,18 @@
  * @Author: Cheng
  * @Date: 2021-08-06 17:48:21
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-08 01:34:49
+ * @LastEditTime: 2022-07-08 01:58:55
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 import Layout from "@/components/Layout.vue"
 
 const routes: Array<RouteRecordRaw> = [
+  { path: "/", name: "index", component: () => import("@/pages/index.vue") },
   {
-    path: "/",
-    redirect: "/home",
+    path: "/home",
+    redirect: "/blog",
     component: Layout,
     children: [
-      { path: "/home", name: "index", component: () => import("@/pages/index.vue") },
       { path: "/blog", name: "blog", component: () => import("@/pages/blog.vue") },
       { path: "/talk", name: "talk", component: () => import("@/pages/talk.vue") },
       { path: "/about", name: "about", component: () => import("@/pages/about.vue") },
