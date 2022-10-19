@@ -3,16 +3,16 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-01 00:59:10
+ * @LastEditTime: 2022-10-19 21:16:45
 -->
 <template>
   <!-- <div v-html="mdText"></div> -->
-  <Test></Test>
+  <Test1></Test1>
   <n-button type="primary">1123</n-button>
 </template>
 
 <script lang="ts">
-import Test from "@/markdowns/test.md"
+import Test1 from "@/markdowns/test.md"
 import { defineComponent, ref, reactive, onMounted, toRefs, computed } from "vue"
 import store from "@/store/index"
 
@@ -24,7 +24,7 @@ interface Book {
 export default defineComponent({
   name: "HelloWorld",
   components: {
-    Test,
+    Test1,
   },
   props: {
     msg: {
