@@ -3,8 +3,8 @@
  * @Author: Cheng
  * @Date: 2022-07-04 23:36:57
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-07 00:08:51
+ * @LastEditTime: 2022-10-19 21:41:45
 -->
 <template>
-  <div>blog</div>
+  <div class="h-full">blog</div>
 </template>

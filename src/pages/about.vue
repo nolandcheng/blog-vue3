@@ -6,5 +6,5 @@
  * @LastEditTime: 2022-07-08 01:40:27
 -->
 <template>
-  <div>about</div>
+  <div class="h-full">about</div>
 </template>

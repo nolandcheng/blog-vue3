@@ -3,10 +3,14 @@
  * @Author: Cheng
  * @Date: 2022-07-05 01:17:24
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-08 01:59:14
+ * @LastEditTime: 2022-10-19 22:09:35
 -->
 <template>
-  <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+  <div class="flex justify-between items-center px-24 py-4">
+    <n-avatar :size="50" :src="getImgUrl('../assets/avatar.png')" @click="backHome" />
+    <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+  </div>
+
   <router-view v-slot="{ Component }">
     <transition name="slide-fade">
       <component :is="Component" />
@@ -16,16 +20,19 @@
 
 <script lang="ts" setup>
 import { h, ref, onBeforeMount, onMounted } from "vue"
-import { useRouter, RouterLink } from "vue-router"
+import { useRouter, RouterLink, useRoute } from "vue-router"
 import { NIcon, useLoadingBar } from "naive-ui"
 import type { MenuOption } from "naive-ui"
 import { LogoGithub as BookIcon } from "@vicons/ionicons5"
 
-function renderIcon(icon: any) {
-  return () => h(NIcon, null, { default: () => h(icon) })
+const router = useRouter()
+const loadingBar = useLoadingBar()
+
+const getImgUrl = (name: string) => {
+  return new URL(name, import.meta.url).href
 }
 
-const activeKey = ref<string | null>(null)
+const activeKey = ref<any>(useRoute().name)
 const menuOptions: MenuOption[] = [
   {
     label: () =>
@@ -79,8 +86,6 @@ const menuOptions: MenuOption[] = [
     icon: renderIcon(BookIcon),
   },
 ]
-const router = useRouter()
-const loadingBar = useLoadingBar()
 
 router.beforeEach((to, form, next) => {
   loadingBar.start()
@@ -100,6 +105,14 @@ onMounted(() => {
     loadingBar.finish()
   })
 })
+
+function renderIcon(icon: any) {
+  return () => h(NIcon, null, { default: () => h(icon) })
+}
+
+function backHome() {
+  router.push("/")
+}
 </script>
 
 <style>
@@ -108,7 +121,7 @@ onMounted(() => {
 }
 
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
