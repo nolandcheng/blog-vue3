@@ -3,17 +3,27 @@
  * @Author: Cheng
  * @Date: 2022-07-05 01:17:24
  * @LastEditors: Cheng
- * @LastEditTime: 2022-10-19 22:09:35
+ * @LastEditTime: 2022-10-20 23:09:49
 -->
 <template>
-  <div class="flex justify-between items-center px-24 py-4">
-    <n-avatar :size="50" :src="getImgUrl('../assets/avatar.png')" @click="backHome" />
-    <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+  <div class="fixed w-screen box-border flex justify-between items-center px-24 py-5">
+    <n-avatar
+      :size="50"
+      :src="getImgUrl('../assets/avatar.png')"
+      @click="backHome"
+      class="cursor-pointer"
+    />
+    <n-menu
+      v-model:value="activeKey"
+      mode="horizontal"
+      class="text-base"
+      :options="menuOptions"
+      :icon-size="24"
+    />
   </div>
-
   <router-view v-slot="{ Component }">
     <transition name="slide-fade">
-      <component :is="Component" />
+      <div class="container max-w-screen-md mx-auto mt-28"><component :is="Component" /></div>
     </transition>
   </router-view>
 </template>

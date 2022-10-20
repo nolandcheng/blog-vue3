@@ -3,10 +3,10 @@
  * @Author: Cheng
  * @Date: 2021-08-05 17:10:09
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-08 01:29:17
+ * @LastEditTime: 2022-10-20 23:09:21
 -->
 <template>
-  <n-config-provider :theme-overrides="themeOverrides" class="h-screen">
+  <n-config-provider :theme-overrides="themeOverrides" class="h-screen overflow-hidden">
     <n-loading-bar-provider>
       <router-view></router-view>
     </n-loading-bar-provider>
