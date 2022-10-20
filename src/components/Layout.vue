@@ -3,10 +3,10 @@
  * @Author: Cheng
  * @Date: 2022-07-05 01:17:24
  * @LastEditors: Cheng
- * @LastEditTime: 2022-10-20 23:09:49
+ * @LastEditTime: 2022-10-20 23:16:44
 -->
 <template>
-  <div class="fixed w-screen box-border flex justify-between items-center px-24 py-5">
+  <div class="fixed w-screen box-border flex justify-between items-center px-20 py-5">
     <n-avatar
       :size="50"
       :src="getImgUrl('../assets/avatar.png')"
@@ -23,7 +23,7 @@
   </div>
   <router-view v-slot="{ Component }">
     <transition name="slide-fade">
-      <div class="container max-w-screen-md mx-auto mt-28"><component :is="Component" /></div>
+      <component :is="Component" class="container max-w-screen-md mx-auto mt-28" />
     </transition>
   </router-view>
 </template>
@@ -50,13 +50,13 @@ const menuOptions: MenuOption[] = [
         RouterLink,
         {
           to: {
-            name: "blog",
+            name: "blogs",
             params: {},
           },
         },
         { default: () => "编码" }
       ),
-    key: "blog",
+    key: "blogs",
   },
   {
     label: () =>
@@ -64,13 +64,13 @@ const menuOptions: MenuOption[] = [
         RouterLink,
         {
           to: {
-            name: "talk",
+            name: "talks",
             params: {},
           },
         },
         { default: () => "杂谈" }
       ),
-    key: "talk",
+    key: "talks",
   },
   {
     label: () =>

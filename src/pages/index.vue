@@ -3,7 +3,7 @@
  * @Author: Cheng
  * @Date: 2022-07-02 21:56:47
  * @LastEditors: Cheng
- * @LastEditTime: 2022-07-08 01:59:31
+ * @LastEditTime: 2022-10-20 23:13:27
 -->
 <template>
   <div class="h-full flex flex-col justify-center items-center">
@@ -53,7 +53,7 @@ const getImgUrl = (name: string) => {
 }
 
 const menuList: Array<any> = [
-  { title: "我的博客", icon: blogIcon, path: "/blog" },
+  { title: "我的博客", icon: blogIcon, path: "/blogs" },
   { title: "React后台", icon: systemIcon, url: "#" },
   { title: "GitHub", icon: githubIcon, url: "https://github.com/nolandcheng" },
   { title: "twitter", icon: twitterIcon, url: "https://twitter.com/nolandcheng15" },
