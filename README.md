@@ -1,6 +1,6 @@
-# blog-vue3-master
+# blog-vue3
 
-vue3 + ts + vite2 搭建的完整博客项目，如果想查看基础架构，点击前往[基础项目](https://github.com/cqdcyonghao/blog-vue3/tree/basic)
+vue3 + ts + vite2 搭建的博客项目
 
 ### 一些配置上的变化
 
